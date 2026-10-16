@@ -1,37 +1,5 @@
 class MyDuration {
-  final int _milliseconds;
-  MyDuration(int milliseconds)
-      : _milliseconds = milliseconds {
-    if (milliseconds < 0) {
-      throw ArgumentError('Duration cannot be negative');
-    }
-  }
 
-  MyDuration.fromHours(int hours)
-      : this(hours * 3600000);
-
-  MyDuration.fromMinutes(int minutes)
-      : this(minutes * 60000);
-
-  MyDuration.fromSeconds(int seconds)
-      : this(seconds * 1000);
-
-  bool operator >(MyDuration other) {
-    return _milliseconds > other._milliseconds;
-  }
-
-  MyDuration operator +(MyDuration other) {
-    return MyDuration(_milliseconds + other._milliseconds);
-  }
-
-  MyDuration operator -(MyDuration other) {
-    final result = _milliseconds - other._milliseconds;
-
-    if (result < 0) {
-      throw ArgumentError('Duration cannot be negative');
-    }
-
-    return MyDuration(result);
   }
 
    // Display the duration in a readable format
